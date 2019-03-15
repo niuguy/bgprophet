@@ -1,0 +1,1 @@
+[{'type': 'lstm', 'neurons': 128, 'input_timesteps': 12, 'input_dim': 324, 'return_seq': False}, {'type': 'dropout', 'rate': 0.2}, {'type': 'lstm', 'neurons': 128, 'return_seq': False}, {'type': 'lstm', 'neurons': 128, 'return_seq': False}, {'type': 'dropout', 'rate': 0.2}, {'type': 'dense', 'neurons': 324, 'activation': 'softmax'}]

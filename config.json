@@ -1,0 +1,36 @@
+{
+	"data": {
+		"filename": "entries_20396154.pkl",
+		"columns": [
+			"sgv"
+		],
+		"sequence_length": 24,
+		"train_test_split": 0.85,
+		"split_date": "2018-12-01", 
+		"normalise": false
+	},
+	"training": {
+		"epochs": 60,
+		"batch_size": 128
+	},
+	"model": {
+		"loss": "categorical_crossentropy",
+		"optimizer": "RMSprop",
+		"save_dir": "saved_models",
+		"layers": [
+			{
+				"type": "lstm",
+				"neurons": 128,
+				"input_timesteps": 24,
+				"input_dim": 324,
+				"return_seq": false
+			},
+		
+			{
+				"type": "dense",
+				"neurons": 324,
+				"activation": "softmax"
+			}
+		]
+	}
+}

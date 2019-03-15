@@ -1,0 +1,1 @@
+[{'type': 'lstm', 'neurons': 128, 'input_timesteps': 11, 'input_dim': 1, 'return_seq': True}, {'type': 'dense', 'neurons': 1, 'activation': 'linear'}]
