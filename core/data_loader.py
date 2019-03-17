@@ -39,6 +39,8 @@ class DataLoader():
     def get_test_data(self, seq_len):
         return self.prepare_input(self.data_test, seq_len)
     
+    def get_origin_test_target(self):
+        return self.data_test
 
     def generate_train_batch(self, seq_len, batch_size, normalise):
         '''Yield a generator of training data from filename on given list of cols split for train/test'''

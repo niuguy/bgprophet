@@ -1,0 +1,14 @@
+artifact_uri: /Users/wang/Work/bgprophet/mlruns/0/595a03784e204547a9fee58b9de91c99/artifacts
+end_time: 1552846330136
+entry_point_name: ''
+experiment_id: 0
+lifecycle_stage: active
+name: ''
+run_uuid: 595a03784e204547a9fee58b9de91c99
+source_name: /Users/wang/Work/bgprophet/run.py
+source_type: 4
+source_version: 3d8b27bb1ec68e8dacfdcf5237161a3f400dc667
+start_time: 1552846313153
+status: 4
+tags: []
+user_id: wang

@@ -13,6 +13,10 @@ from core.model import Model
 import mlflow
 from mlflow import log_metric
 import _pickle as pickle
+from sklearn.metrics import mean_squared_error
+from sklearn.metrics import mean_absolute_error
+from sklearn.metrics import r2_score
+import math
 
 
 def record_configs_mlflow(configs):
@@ -25,7 +29,16 @@ def record_configs_mlflow(configs):
     mlflow.log_param("layers", configs['model']['layers'])
 
 def evaluate_results(preds, targets):
-    pass
+    rmse = math.sqrt(mean_squared_error(targets, preds))
+    mae = mean_absolute_error(targets, preds)
+    r2 = r2_score(targets, preds)
+    print('rmse', rmse)
+    print('mae', mae)
+    print('r2', r2)
+    mlflow.log_metric("rmse", rmse)
+    mlflow.log_metric("mae", mae)
+    mlflow.log_metric("r2", r2)
+    
 
 def plot_results(predicted_data, true_data):
     fig = plt.figure(facecolor='white')
@@ -76,7 +89,7 @@ def main():
             batch_size = configs['training']['batch_size'],
             save_dir = configs['model']['save_dir']
         )
-        # model.load_model('saved_models/15032019-134842-e60.h5')
+        # model.load_model('saved_models/15032019-164754-e60.h5')
         ''' 
         # out-of memory generative training
         steps_per_epoch = math.ceil((data.len_train - configs['data']['sequence_length']) / configs['training']['batch_size'])
@@ -98,10 +111,15 @@ def main():
         )
 
         predictions = model.predict_sequence(x_test, configs['data']['sequence_length'])
+        
         pickle.dump(predictions, open('results/predict_'+str(time.time())+'.pkl', 'wb'))
 
-        print('length of prediction', len(predictions))
-        evaluate_results(predictions, y_test)
+
+        y_true = data.get_origin_test_target()
+        print('predictions[0]',predictions[0] )
+        print('y_test[0]',y_true[0] )
+
+        evaluate_results(predictions, y_true[configs['data']['sequence_length']:])
 
         # plot_results_multiple(predictions, y_test, configs['data']['sequence_length'])
         # plot_results(predictions, y_test[configs['data']['sequence_length']-1:])
