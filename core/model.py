@@ -5,7 +5,7 @@ import datetime as dt
 from numpy import newaxis
 from core.utils import Timer
 from keras.layers import Dense, Activation, Dropout, LSTM
-from keras.models import Sequential, load_model
+from keras.models import Model, Sequential, save_model, load_model
 from keras.callbacks import EarlyStopping, ModelCheckpoint
 import _pickle as pickle
 import time
@@ -64,7 +64,7 @@ class Model():
 			batch_size=batch_size,
 			callbacks=callbacks
 		)
-		self.model.save(save_fname)
+		save_model(self.model, save_fname)
 
 		print('[Model] Training Completed. Model saved as %s' % save_fname)
 		timer.stop()

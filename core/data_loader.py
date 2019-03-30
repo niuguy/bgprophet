@@ -7,9 +7,9 @@ import _pickle as pickle
 class DataLoader():
     """A class for loading and transforming data for the lstm model"""
 
-    def __init__(self, filename, splitdate, cols):
+    def __init__(self, filename, splitdate, cols,maxBG):
         dataframe = pickle.load(open(filename, 'rb'))
-        self.maxBG = np.max(dataframe['sgv'])+1
+        self.maxBG = maxBG
         self.data_train = dataframe[dataframe['datetime']<splitdate].reset_index()[cols].values
         self.data_test  = dataframe[dataframe['datetime']>=splitdate].reset_index()[cols].values
         self.len_train  = len(self.data_train)

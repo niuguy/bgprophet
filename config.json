@@ -7,10 +7,11 @@
 		"sequence_length": 12,
 		"train_test_split": 0.85,
 		"split_date": "2018-12-20", 
-		"normalise": false
+		"normalise": false,
+		"maxBG":420
 	},
 	"training": {
-		"epochs": 60,
+		"epochs": 2,
 		"batch_size": 128
 	},
 	"model": {
@@ -22,13 +23,13 @@
 				"type": "lstm",
 				"neurons": 128,
 				"input_timesteps": 12,
-				"input_dim": 324,
+				"input_dim": 420,
 				"return_seq": false
 			},
 		
 			{
 				"type": "dense",
-				"neurons": 324,
+				"neurons": 420,
 				"activation": "softmax"
 			}
 		]

@@ -10,5 +10,5 @@ def process_nightscout_json(json_name,save_name):
     pickle.dump(entries_df, open(save_name, 'wb'))
 
 if __name__ == "__main__":
-    process_nightscout_json('data/20396154_entries__to_2018-12-20.json', 'data/20396154_entries_df.pkl')
+    process_nightscout_json('data/28176124_entries__to_2018-11-05.json', 'data/28176124_entries__to_2018-11-05_df.pkl')
     

@@ -3,13 +3,15 @@ __copyright__ = "Jakob Aungiers 2018"
 __version__ = "2.0.0"
 __license__ = "MIT"
 
+import tensorflow as tf
 import os
 import json
 import time
 import math
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 from core.data_loader import DataLoader
 from core.model import Model
+
 import mlflow
 from mlflow import log_metric
 import _pickle as pickle
@@ -40,25 +42,25 @@ def evaluate_results(preds, targets):
     mlflow.log_metric("r2", r2)
     
 
-def plot_results(predicted_data, true_data):
-    fig = plt.figure(facecolor='white')
-    ax = fig.add_subplot(1)
-    ax.plot(true_data, label='True Data')
-    plt.plot(predicted_data, label='Prediction')
-    plt.legend()
-    plt.show()
+# def plot_results(predicted_data, true_data):
+#     fig = plt.figure(facecolor='white')
+#     ax = fig.add_subplot(1)
+#     ax.plot(true_data, label='True Data')
+#     plt.plot(predicted_data, label='Prediction')
+#     plt.legend()
+#     plt.show()
 
 
-def plot_results_multiple(predicted_data, true_data, prediction_len):
-    fig = plt.figure(facecolor='white')
-    ax = fig.add_subplot(111)
-    ax.plot(true_data, label='True Data')
-	# Pad the list of predictions to shift it in the graph to it's correct start
-    for i, data in enumerate(predicted_data):
-        padding = [None for p in range(i * prediction_len)]
-        plt.plot(padding + data, label='Prediction')
-        plt.legend()
-    plt.show()
+# def plot_results_multiple(predicted_data, true_data, prediction_len):
+#     fig = plt.figure(facecolor='white')
+#     ax = fig.add_subplot(111)
+#     ax.plot(true_data, label='True Data')
+# 	# Pad the list of predictions to shift it in the graph to it's correct start
+#     for i, data in enumerate(predicted_data):
+#         padding = [None for p in range(i * prediction_len)]
+#         plt.plot(padding + data, label='Prediction')
+#         plt.legend()
+#     plt.show()
 
 
 def main():
@@ -70,7 +72,8 @@ def main():
         data = DataLoader(
             os.path.join('data', configs['data']['filename']),
             configs['data']['split_date'],
-            configs['data']['columns']
+            configs['data']['columns'],
+            configs['data']['maxBG']
         )
 
 
