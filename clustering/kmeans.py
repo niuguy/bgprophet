@@ -1,10 +1,28 @@
 import pandas as pd
 import _pickle as pickle
 import numpy as np
-import matplotlib.pyplot as plt
-import datetime
+import time
 import math
 import random
+
+# def processing(X_df):
+#     #remove the 
+#     #make the array list same shapes
+#     max_len = 31
+#     rst = []
+#     data = filter(lambda x:len(x)<31, data)
+#     X_df = X_df[len(X_df.sgvs)<=31]
+#     padded = []
+#     for bgs in data:
+#         len_bgs = len(bgs)
+#         if len_bgs < max_len:
+#             # padding with mean value
+#             value = int(np.sum(bgs)/len_bgs)
+#             paddings = [value for x in range(len_bgs, max_len)]
+#             # interps = np.interp([x for x in range(len_bgs, max_len)], [x for x in range(0, len_bgs)], bgs)
+#             bgs.append(paddings)
+#         padded.append(bgs)
+#     return padded    
 
 
 def DTWDistance(s1, s2, w):
@@ -25,11 +43,14 @@ def DTWDistance(s1, s2, w):
     return math.sqrt(DTW[len(s1)-1, len(s2)-1])
 
 def LB_Keogh(s1,s2,r):
+
     LB_sum=0
     for ind,i in enumerate(s1):
-        
-        lower_bound=min(s2[(ind-r if ind-r>=0 else 0):(ind+r)])
-        upper_bound=max(s2[(ind-r if ind-r>=0 else 0):(ind+r)])
+        lower_bound = upper_bound = 0
+        radius = s2[(ind-r if ind-r>=0 else 0):(ind+r)]
+        if len(radius)!=0:
+            lower_bound=min(s2[(ind-r if ind-r>=0 else 0):(ind+r)])
+            upper_bound=max(s2[(ind-r if ind-r>=0 else 0):(ind+r)])
 
         if i>upper_bound:
             LB_sum=LB_sum+(i-upper_bound)**2
@@ -44,8 +65,8 @@ def k_means_clust(data,num_clust,num_iter,w=5):
        
     counter=0
     for n in range(num_iter):
+        print('round ', n)
         counter+=1
-        print(counter)
         assignments={}
         #assign data points to clusters
         for ind,i in enumerate(data):
@@ -72,9 +93,13 @@ def k_means_clust(data,num_clust,num_iter,w=5):
     return centroids,assignments
 
 if __name__ == "__main__":
+    start = time.time()
     X_pd = pickle.load(open('/Users/wang/data/OpenAPS/sgvs_train_2018-1.pkl', 'rb'))
     X = X_pd['sgvs'].values
-    X = [x.tolist() for x in X]
     X = [[int(i) for i in j] for j in X ]
-    print(X[:5])
-    centroids, assignnments = k_means_clust(X, 4, 10)
+    print(np.array(X).shape)
+    centroids, assignments = k_means_clust(X, 4, 10)
+    print('centroids/n', centroids)
+    print('assignments/n', assignments)
+    end = time.time()
+    print('time used', end-start)
