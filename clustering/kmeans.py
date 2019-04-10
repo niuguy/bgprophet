@@ -98,8 +98,15 @@ if __name__ == "__main__":
     X = X_pd['sgvs'].values
     X = [[int(i) for i in j] for j in X ]
     print(np.array(X).shape)
-    centroids, assignments = k_means_clust(X, 4, 10)
+    centroids, assignments = k_means_clust(X, 10, 10)
+    X_pd['group'] = None
+    for key,values in assignments.items():
+        for v in values:
+            X_pd.ix[v, 'group'] = key
+    
+    # print(X_pd['group'].head(1000))
+
     print('centroids/n', centroids)
-    print('assignments/n', assignments)
+    pickle.dump(X_pd, open('/Users/wang/data/OpenAPS/sgvs_train_2018-1-cluster-10.pkl', 'wb'))
     end = time.time()
     print('time used', end-start)
