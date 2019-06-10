@@ -75,7 +75,7 @@ def cnn(train_x, train_y, n_steps, n_features):
     model.compile(optimizer='adam', loss='mse')
     
     model.fit(train_x, train_y, batch_size=128,
-          epochs=1000)
+          epochs=10)
     model.save('models/bg_predict_cnn_alpha.h5')
     print('Model saved')
     
@@ -151,13 +151,13 @@ def run(model_name):
 
         next_bgs = []
         pred_inputs = []
-        for i in range(0, len(test_bg_list) - n_steps, 1):
-            pred_input = test_x[i:i+n_steps]
+        for i in range(0, len(test_x), 1):
+            pred_input = test_x[i]
             print('pred_input', pred_input)
             pred_inputs.append(pred_input)
             pred_input = pred_input.reshape((1, n_steps, n_features))
             next_bgs.append(model.predict(pred_input, verbose=0)[0])
-        mae = mean_absolute_error(pred_inputs, next_bgs)    
+        mae = mean_absolute_error(test_y, next_bgs)    
         pickle.dump(next_bgs, open('results/predict_'+model_name+'_'+test_date+'.pkl', 'wb'), -1)
         
         mlflow.log_param("model_name", model_name)
@@ -168,9 +168,9 @@ def run(model_name):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model_name", help="Choose from cnn,v_lstm, b_lstm, s_lstm, cnn_lstm, conv_lstm", action = 'store', default="v_lstm", type = str)
+    parser.add_argument("--m", help="Choose from cnn,v_lstm, b_lstm, s_lstm, cnn_lstm, conv_lstm", action = 'store', default="v_lstm", type = str)
     args = parser.parse_args()
-    run(args.model_name)
+    run(args.m)
 #     save_file()
 #     run_lstm()
 #     run_cnn()
