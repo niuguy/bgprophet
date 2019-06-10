@@ -10,6 +10,13 @@ import random
 import sys
 import io
 
+
+
+from keras.layers import Flatten
+from keras.layers.convolutional import Conv1D
+from keras.layers.convolutional import MaxPooling1D
+
+
 import pandas as pd
 import json
 from pprint import pprint
@@ -50,6 +57,22 @@ def prepare_input(bg_list, maxlen, step, maxBG):
     print('len_x=',len(x), 'len_y=',len(y))
     return x,y
 
+
+def prepare_input_cnn(sequence, n_steps):
+    X, y = list(), list()
+	for i in range(len(sequence)):
+		# find the end of this pattern
+		end_ix = i + n_steps
+		# check if we are beyond the sequence
+		if end_ix > len(sequence)-1:
+			break
+		# gather input and output parts of the pattern
+		seq_x, seq_y = sequence[i:end_ix], sequence[end_ix]
+		X.append(seq_x)
+		y.append(seq_y)
+	return array(X), array(y)
+
+
 def sample(preds, temperature=1.0):
 # helper function to sample an index from a probability array
     preds = np.asarray(preds).astype('float64')
@@ -64,6 +87,43 @@ def temp():
     print(results[:10])
 
 
+def run_cnn():
+    est_date = '2018-12-01'
+    entries_df = pickle.load(open('data/entries_20396154.pkl', 'rb'))
+    bg_list = entries_df['sgv']
+    maxBG = np.max(bg_list)+1
+    train_bg_list = entries_df[entries_df['datetime']<test_date].reset_index()['sgv']
+    print('len(train_bg_list)', len(train_bg_list))
+    test_bg_list = entries_df[entries_df['datetime']>=test_date].reset_index()['sgv']
+    n_steps = 12
+    n_features = 1
+    train_x, train_y = prepare_input(train_bg_list, n_steps)
+    test_x, test_y = prepare_input_cnn(train_bg_list, n_steps)
+    train_x = train_x.reshape((train_x.shape[0], train.shape[1], n_features))
+    print('CNN model...')
+    model = Sequential()
+    model.add(Conv1D(filters=64, kernel_size=2, activation='relu', input_shape=(maxlen, 1)))
+    model.add(MaxPooling1D(pool_size=2))
+    model.add(Flatten())
+    model.add(Dense(50, activation='relu'))
+    model.add(Dense(1))
+    model.compile(optimizer='adam', loss='mse')
+    
+    model.fit(train_x, train_y, batch_size=128,
+          epochs=60)
+    model.save('models/bg_predict_cnn_alpha.h5')
+    print('Model saved')
+    
+    next_bgs = []
+    for i in range(0, len(test_bg_list) - maxlen, step):
+        pred_input = test_x[i:i+maxlen]
+        print('pred_input', pred_input)
+        pred_input = pred_input.reshape((1, n_steps, n_features))
+        next_bgs.append(sample(model.predict(pred_input, verbose=0)[0]))
+    
+    print('len(next_bgs)', len(next_bgs))
+    pickle.dump(next_bgs, open('results/predict_'+test_date+'_cnn_+'+str(maxlen), 'wb'), -1)
+    
 
 def run():
     ## load data
@@ -80,21 +140,36 @@ def run():
     test_x,test_y = prepare_input(test_bg_list, maxlen, step, maxBG)
 
 
-    print('Build model...')
-    model = Sequential()
-    model.add(LSTM(128, input_shape=(maxlen, maxBG)))
-    model.add(Dense(maxBG, activation='softmax'))
-
-    optimizer = RMSprop(lr=0.01)
-    model.compile(loss='categorical_crossentropy', optimizer=optimizer)
-
-    model.fit(train_x, train_y,
-          batch_size=128,
-          epochs=60)
     
+#     print('Build model...')
+#     model = Sequential()
+#     model.add(LSTM(128, input_shape=(maxlen, maxBG)))
+#     model.add(Dense(maxBG, activation='softmax'))
+
+#     optimizer = RMSprop(lr=0.01)
+#     model.compile(loss='categorical_crossentropy', optimizer=optimizer)
+
+#     model.fit(train_x, train_y,
+#           batch_size=128,
+#           epochs=60)
+#     model.save('models/bg_predict_lstm_alpha.h5')
+
+#     print('Model saved...')
+    
+    
+    print('CNN model...')
+    model = Sequential()
+    model.add(Conv1D(filters=64, kernel_size=2, activation='relu', input_shape=(maxlen, 1)))
+    model.add(MaxPooling1D(pool_size=2))
+    model.add(Flatten())
+    model.add(Dense(50, activation='relu'))
+    model.add(Dense(1))
+    model.compile(optimizer='adam', loss='mse')
+    model.fit(train_x.reshape((train_x.shape[0], train.shape[1], n_features)), train_y, batch_size=128,
+          epochs=60)
+    model.save('models/bg_predict_cnn_alpha.h5')
     print('Save model...')
 
-    model.save('models/bg_predict_alpha.h5')
 
     print('Predict on test data...')
     next_bgs = []
@@ -104,7 +179,7 @@ def run():
         next_bgs.append(sample(model.predict(pred_input, verbose=0)[0]))
     
     print('len(next_bgs)', len(next_bgs))
-    pickle.dump(next_bgs, open('results/predict_'+test_date+'_+'+str(maxlen), 'wb'), -1)
+    pickle.dump(next_bgs, open('results/predict_'+test_date+'_cnn_+'+str(maxlen), 'wb'), -1)
 
     # def sample(preds, temperature=1.0):
     # # helper function to sample an index from a probability array
@@ -151,6 +226,6 @@ def run():
     #       callbacks=[print_callback])
 
 if __name__ == "__main__":
-    run()
+    run_cnn()
     # temp()
 
