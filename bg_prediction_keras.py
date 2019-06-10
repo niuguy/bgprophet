@@ -62,12 +62,10 @@ def prepare_input_cnn(sequence, n_steps):
     X, y = list(), list()
     for i in range(len(sequence)):
         end_ix = i + n_steps
-	# check if we are beyond the sequence
-	if end_ix > len(sequence)-1:break
-	# gather input and output parts of the pattern
-	seq_x, seq_y = sequence[i:end_ix], sequence[end_ix]
-	X.append(seq_x)
-	y.append(seq_y)
+        if end_ix > len(sequence)-1:break
+        seq_x, seq_y = sequence[i:end_ix], sequence[end_ix]
+        X.append(seq_x)
+        y.append(seq_y)
     return array(X), array(y)
 
 
