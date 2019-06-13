@@ -9,23 +9,29 @@ import random
 from math import sqrt
 
 import mlflow
-import numpy as np
 import pandas as pd
+import keras
 from keras.layers import Bidirectional
 from keras.layers import ConvLSTM2D
-from keras.layers import Dense
-from keras.layers import Flatten
-from keras.layers import LSTM
 from keras.layers import TimeDistributed
+from keras.layers import merge
 from keras.layers.convolutional import Conv1D
 from keras.layers.convolutional import MaxPooling1D
-from keras.models import Sequential
+from keras.layers.core import *
+from keras.layers.recurrent import LSTM
+from keras.models import *
 from numpy import array
-from sklearn.metrics import mean_absolute_error
-from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import train_test_split
 
 logging.basicConfig(filename='pred_results.log',level=logging.INFO)
+
+INPUT_DIM = 2
+TIME_STEPS = 20
+# if True, the attention vector is shared across the input_dimensions where the attention is applied.
+SINGLE_ATTENTION_VECTOR = False
+APPLY_ATTENTION_BEFORE_LSTM = False
+
+
 
 
 def load_json(file_name):
@@ -222,16 +228,45 @@ def cnn_lstm(train_x, train_y, window,n_seq,  n_features):
     return model
 
 def conv_lstm(train_x, train_y, window, n_seq, y_step, n_features):
-    model = Sequential()
-    model.add(ConvLSTM2D(filters=64, kernel_size=(1,2), activation='relu', input_shape=(n_seq, 1, int(window/n_seq), n_features)))
-    model.add(Flatten())
-    model.add(Dense(y_step))
-    model.compile(optimizer='adam', loss='mse')
-    model.fit(train_x, train_y,batch_size=64,epochs=1)
-
-    print('Model saved')
-    return model
+    model1 = Sequential()
+    model1.add(ConvLSTM2D(filters=64, kernel_size=(1,2), activation='relu', input_shape=(n_seq, 1, int(window/n_seq), n_features)))
+    model1.add(Flatten())
+    model1.add(Dense(y_step))
+    model1.compile(optimizer='adam', loss='mse')
     
+    
+
+
+    model2 = Sequential()                            # input_shape  = (batch, step, input_dim)
+    model2.add(Lambda(lambda x: K.mean(x, axis=2)))  # output_shape = (batch, step)
+    model2.add(Activation('softmax'))                # output_shape = (batch, step)model.fit(train_x, train_y,batch_size=64,epochs=10)
+    model2.add(RepeatVector(32))                 # output_shape = (batch, hidden, step)
+    model2.add(Permute(2, 1))                        # output_shape = (batch, step, hidden)print('Model saved')
+
+    #The final model which gives the weighted sum:
+    model = Sequential()
+    model.add(merge([model1, model2], 'mul'))  # Multiply each element with corresponding weight a[i][j][k] * b[i][j]
+    model.add(TimeDistributed(merge('sum'))) # Sum the weighted elements.
+
+
+
+
+    return model
+
+def attention_3d_block(inputs):
+    # inputs.shape = (batch_size, time_steps, input_dim)
+    input_dim = int(inputs.shape[2])
+    a = Permute((2, 1))(inputs)
+    a = Reshape((input_dim, TIME_STEPS))(a) # this line is not useful. It's just to know which dimension is what.
+    a = Dense(TIME_STEPS, activation='softmax')(a)
+    if SINGLE_ATTENTION_VECTOR:
+        a = Lambda(lambda x: K.mean(x, axis=1), name='dim_reduction')(a)
+        a = RepeatVector(input_dim)(a)
+    a_probs = Permute((2, 1), name='attention_vec')(a)
+    output_attention_mul = merge([inputs, a_probs], name='attention_mul', mode='mul')
+    return output_attention_mul
+
+
 def evaluate_forcasts(actual, predicted):
     s = 0
     for row in range(actual.shape[0]):
