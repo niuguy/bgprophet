@@ -94,11 +94,12 @@ def k_means_clust(data,num_clust,num_iter,w=5):
 
 if __name__ == "__main__":
     start = time.time()
-    X_pd = pickle.load(open('/Users/wang/data/OpenAPS/sgvs_train_2018-1.pkl', 'rb'))
+#   X_pd = pickle.load(open('/Users/wang/data/OpenAPS/sgvs_train_2018-1.pkl', 'rb'))
+    X_pd = pickle.load(open('data/entries_20396154_2.pkl', 'rb'))
     X = X_pd['sgvs'].values
     X = [[int(i) for i in j] for j in X ]
     print(np.array(X).shape)
-    centroids, assignments = k_means_clust(X, 10, 10)
+    centroids, assignments = k_means_clust(X, 4, 10)
     X_pd['group'] = None
     for key,values in assignments.items():
         for v in values:
@@ -107,6 +108,6 @@ if __name__ == "__main__":
     # print(X_pd['group'].head(1000))
 
     print('centroids/n', centroids)
-    pickle.dump(X_pd, open('/Users/wang/data/OpenAPS/sgvs_train_2018-1-cluster-10.pkl', 'wb'))
+    pickle.dump(X_pd, open('data/entries_20396154-cluster-4.pkl', 'wb'))
     end = time.time()
     print('time used', end-start)

@@ -1,0 +1,15 @@
+artifact_uri: /Users/wang/Work/bgprophet/mlruns/0/fc2f019fa40843ef9d49f3356678904b/artifacts
+end_time: 1560259643123
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: fc2f019fa40843ef9d49f3356678904b
+run_uuid: fc2f019fa40843ef9d49f3356678904b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1560259319536
+status: 4
+tags: []
+user_id: jupyter
