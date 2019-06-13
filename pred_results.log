@@ -385,3 +385,33 @@ Colocations handled automatically by placer.
 WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
 Instructions for updating:
 Use tf.cast instead.
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/ben/Work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/ben/Work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/ben/Work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/ben/Work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/ben/Work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/ben/Work/bgprophet, universal_newlines=False, shell=None)
+WARNING:tensorflow:From /home/ben/Tools/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /home/ben/Tools/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/ben/Work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/ben/Work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/ben/Work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/ben/Work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/ben/Work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/ben/Work/bgprophet, universal_newlines=False, shell=None)
+WARNING:tensorflow:From /home/ben/Tools/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/ben/Work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/ben/Work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/ben/Work/bgprophet, universal_newlines=False, shell=None)
+WARNING:tensorflow:From /home/ben/Tools/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /home/ben/Tools/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.

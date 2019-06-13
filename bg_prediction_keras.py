@@ -142,14 +142,18 @@ def cluster_input(sequence, window, y_step=0, cluster_id = 0):
     print('X_train.shape={0}'.format(X_train.shape))
     return np.array(X_train), np.array(X_test), y_train, y_test
 
-def prepare_input(sequence, window, y_step=0):
+def prepare_input(seq, window, y_step=0):
     X, y = list(), list()
-    for i in range(len(sequence)):
-        end_ix = i + window
-        if end_ix+y_step > len(sequence)-1:break
-        seq_x, seq_y = sequence[i:end_ix], sequence[end_ix+y_step]
-        X.append(seq_x)
-        y.append(seq_y)
+    in_start = 0
+    for i in range(len(seq)):
+        in_end = in_start + window
+        out_end = in_end + y_step
+        if out_end < len(seq):
+            x_input = seq[in_start:in_end]
+            # x_input = x_input.reshape((len(x_input), 1))
+            X.append(x_input)
+            y.append(seq[in_end:out_end])
+        in_start += 1
     return array(X), array(y)
 
 
@@ -228,28 +232,45 @@ def cnn_lstm(train_x, train_y, window,n_seq,  n_features):
     print('Model saved')
     return model
 
-def conv_lstm(train_x, train_y, window,n_seq, n_features):
+def conv_lstm(train_x, train_y, window, n_seq, y_step, n_features):
     model = Sequential()
     model.add(ConvLSTM2D(filters=64, kernel_size=(1,2), activation='relu', input_shape=(n_seq, 1, int(window/n_seq), n_features)))
     model.add(Flatten())
-    model.add(Dense(1))
+    model.add(Dense(y_step))
     model.compile(optimizer='adam', loss='mse')
-    model.fit(train_x, train_y,batch_size=128,epochs=500)
+    model.fit(train_x, train_y,batch_size=64,epochs=200)
 
     print('Model saved')
     return model
     
+def evaluate_forcasts(actual, predicted):
+    scores = list()
+    for i in range(actual.shape[1]):
+        mse = mean_absolute_error(actual[:, i], predicted[:, i])
+        rmse = sqrt(mse)
+        scores.append(mse)
+    s = 0
+    for row in range(actual.shape[0]):
+        for col in range(actual.shape[1]):
+            s += (actual[row, col] - predicted[row, col])**2
+    score = sqrt(s / (actual.shape[0] * actual.shape[1]))
+    return score, scores
+    
+
+
+
+
 
 
 def run(model_name, window, y_step):
     with mlflow.start_run():
         print('start training {0}'.format(model_name))
-                
+
         n_features = 1
-        n_seq =2 
+        n_seq =2
         entries_df = pickle.load(open('data/entries_20396154_2.pkl', 'rb'))
         bg_list = entries_df['sgv']
-        
+
         test_date = '2018-12-01'
         train_bg_list = entries_df[entries_df['datetime']<test_date].reset_index()['sgv']
         print('len(train_bg_list)', len(train_bg_list))
@@ -279,7 +300,7 @@ def run(model_name, window, y_step):
         if model_name == 'cnn_lstm':
             model = cnn_lstm(train_x, train_y, window, n_seq, n_features)
         if model_name == 'conv_lstm':
-            model = conv_lstm(train_x, train_y, window, n_seq, n_features)
+            model = conv_lstm(train_x, train_y, window, n_seq,y_step, n_features)
         
 
         next_bgs = []
@@ -294,17 +315,16 @@ def run(model_name, window, y_step):
             else:
                 pred_input = pred_input.reshape((1, window, n_features))
             next_bgs.append(model.predict(pred_input, verbose=0)[0])
-        mae = mean_absolute_error(test_y, next_bgs)
-        rms = sqrt(mean_squared_error(test_y, next_bgs))
+        rms, mses = evaluate_forcasts(test_y, next_bgs)
 
-        logging.info('model={0},window = {1}, y_tesp={2}, mae={3}, rms={4}'.format(model_name,window, y_step, mae, rms))
+        logging.info('model={0},window = {1}, y_step={2}, rms={3}'.format(model_name,window, y_step, rms))
         
         
         pred_results = pd.DataFrame(data={'y_true':test_y, 'y_pred':next_bgs})
         pickle.dump(pred_results, open('results/predict_'+model_name+'_'+str(window)+'_'+str(y_step)+'.pkl', 'wb'), -1)
         
         mlflow.log_param("model_name", model_name)
-        mlflow.log_param("mae", mae)
+        mlflow.log_param("rms", rms)
 
 
 
@@ -319,7 +339,7 @@ if __name__ == "__main__":
     target_step = args.s
     window = args.w
     for y_step in range(6, -1, -1):
-        for m in [ "v_lstm"]:
+        for m in [ "conv_lstm"]:
             run(m, window, y_step)
     
     
