@@ -22,6 +22,7 @@ from keras.layers.convolutional import MaxPooling1D
 from keras.models import Sequential
 from numpy import array
 from sklearn.metrics import mean_absolute_error
+from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import train_test_split
 
 logging.basicConfig(filename='pred_results.log',level=logging.INFO)
@@ -226,23 +227,22 @@ def conv_lstm(train_x, train_y, window, n_seq, y_step, n_features):
     model.add(Flatten())
     model.add(Dense(y_step))
     model.compile(optimizer='adam', loss='mse')
-    model.fit(train_x, train_y,batch_size=64,epochs=200)
+    model.fit(train_x, train_y,batch_size=64,epochs=1)
 
     print('Model saved')
     return model
     
 def evaluate_forcasts(actual, predicted):
-    scores = list()
-    for i in range(actual.shape[1]):
-        mse = mean_absolute_error(actual[:, i], predicted[:, i])
-        rmse = sqrt(mse)
-        scores.append(mse)
     s = 0
     for row in range(actual.shape[0]):
         for col in range(actual.shape[1]):
             s += (actual[row, col] - predicted[row, col])**2
     score = sqrt(s / (actual.shape[0] * actual.shape[1]))
-    return score, scores
+    return score
+
+
+
+
     
 
 
@@ -303,13 +303,15 @@ def run(model_name, window, y_step):
             else:
                 pred_input = pred_input.reshape((1, window, n_features))
             next_bgs.append(model.predict(pred_input, verbose=0)[0])
-        rms, mses = evaluate_forcasts(test_y, next_bgs)
+
+        pred_y = np.array(next_bgs)
+        rms =  evaluate_forcasts(test_y, pred_y)
 
         logging.info('model={0},window = {1}, y_step={2}, rms={3}'.format(model_name,window, y_step, rms))
         
         
-        pred_results = pd.DataFrame(data={'y_true':test_y, 'y_pred':next_bgs})
-        pickle.dump(pred_results, open('results/predict_'+model_name+'_'+str(window)+'_'+str(y_step)+'.pkl', 'wb'), -1)
+        # pred_results = pd.DataFrame(data={'y_true':test_y, 'y_pred':next_bgs})
+        # pickle.dump(pred_results, open('results/predict_'+model_name+'_'+str(window)+'_'+str(y_step)+'.pkl', 'wb'), -1)
         
         mlflow.log_param("model_name", model_name)
         mlflow.log_param("rms", rms)
