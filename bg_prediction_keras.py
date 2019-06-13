@@ -1,42 +1,30 @@
 from __future__ import print_function
-from keras.callbacks import LambdaCallback
-from keras.models import Sequential
-from keras.layers import Dense
-from keras.layers import LSTM
-from keras.optimizers import RMSprop
-from keras.utils.data_utils import get_file
-from keras.layers import Flatten
-from keras.layers.convolutional import Conv1D
-from keras.layers.convolutional import MaxPooling1D
-from keras.layers import TimeDistributed
+
+import argparse
+import json
+import logging
+import math
+import pickle
+import random
+from math import sqrt
+
+import mlflow
+import numpy as np
+import pandas as pd
 from keras.layers import Bidirectional
 from keras.layers import ConvLSTM2D
-
-
-import numpy as np
+from keras.layers import Dense
+from keras.layers import Flatten
+from keras.layers import LSTM
+from keras.layers import TimeDistributed
+from keras.layers.convolutional import Conv1D
+from keras.layers.convolutional import MaxPooling1D
+from keras.models import Sequential
 from numpy import array
-import random
-import sys
-import io
-import argparse
-
-
 from sklearn.metrics import mean_absolute_error
 from sklearn.model_selection import train_test_split
 
-import pandas as pd
-import json
-import pickle
-import mlflow
-from mlflow import log_metric
-import logging
-from sklearn.metrics import mean_squared_error
-from math import sqrt
-import time
-import math
-import random
-
-logging.basicConfig(filename='pred_results.log',level=logging.DEBUG)
+logging.basicConfig(filename='pred_results.log',level=logging.INFO)
 
 
 def load_json(file_name):
