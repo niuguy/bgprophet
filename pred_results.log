@@ -452,3 +452,62 @@ Colocations handled automatically by placer.
 WARNING:tensorflow:From /home/ben/Tools/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
 Instructions for updating:
 Colocations handled automatically by placer.
+WARNING:tensorflow:From /home/ben/Tools/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /home/ben/Tools/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /home/ben/Tools/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /home/ben/Tools/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /home/ben/Tools/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /home/ben/Tools/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+INFO:root:model=conv_lstm,window = 12, y_step=6, rms=16.9224708531
+WARNING:tensorflow:From /home/ben/Tools/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /home/ben/Tools/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+INFO:root:model=conv_lstm,window = 12, y_step=12, rms=23.9905546633
+WARNING:tensorflow:From /home/ben/Tools/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /home/ben/Tools/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+INFO:root:model=conv_lstm,window = 12, y_step=12, rms=20.7089710033
+WARNING:tensorflow:From /home/ben/Tools/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /home/ben/Tools/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+INFO:root:model=conv_lstm,window = 12, y_step=12, rms=20.7257196456
+INFO:root:zoneA = 0, zoneB =0, zoneC=0, zoneD=0, zongE=0
+INFO:root:model=conv_lstm,window = 12, y_step=9, rms=16.9340474561
+INFO:root:zoneA = 0, zoneB =0, zoneC=0, zoneD=0, zongE=0
+WARNING:tensorflow:From /home/ben/Tools/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /home/ben/Tools/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+INFO:root:model=conv_lstm,window = 12, y_step=6, rms=13.1673261719
+INFO:root:zoneA = 0.831929555896, zoneB =0.153905053599, zoneC=0.0, zoneD=0.0141653905054, zongE=0.0
+INFO:root:model=conv_lstm,window = 12, y_step=3, rms=8.30695047009
+INFO:root:zoneA = 0.965180792041, zoneB =0.0313755500287, zoneC=0.0, zoneD=0.00344365792998, zongE=0.0
+WARNING:tensorflow:From /home/ben/Tools/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /home/ben/Tools/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.

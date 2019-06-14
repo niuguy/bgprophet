@@ -1,0 +1,15 @@
+artifact_uri: /Users/wang/Work/bgprophet/mlruns/0/7b7cfff9563745c597703163f900363b/artifacts
+end_time: 1560518035398
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: 7b7cfff9563745c597703163f900363b
+run_uuid: 7b7cfff9563745c597703163f900363b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1560518001369
+status: 3
+tags: []
+user_id: ben
