@@ -1,0 +1,397 @@
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+INFO:root:model=cnn,mae=5.37332649557
+INFO:root:model=v_lstm,mae=2.59093175589
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+INFO:root:model=b_lstm,mae=2.58310250511
+INFO:root:model=s_lstm,mae=2.56110991067
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+INFO:root:model=cnn_lstm,mae=3.97336973053
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+INFO:root:model=conv_lstm,mae=2.56767115215
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+INFO:root:model=cnn,y_tesp=1, mae=1
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+INFO:root:model=cnn,y_tesp=1, mae=1
+INFO:root:model=v_lstm,y_tesp=1, mae=1
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+INFO:root:model=cnn,y_tesp=1, mae=7.74085506938
+INFO:root:model=v_lstm,y_tesp=1, mae=5.46313339168
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+INFO:root:model=cnn,y_tesp=0, mae=5.43491860146
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+INFO:root:model=cnn,y_tesp=7, mae=19.1662470602
+INFO:root:model=v_lstm,y_tesp=7, mae=18.1899075674
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+INFO:root:model=cnn,y_tesp=7, mae=19.2558959245
+INFO:root:model=v_lstm,y_tesp=7, mae=17.7057310497
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+INFO:root:model=conv_lstm,y_tesp=7, mae=17.7221264965
+INFO:root:model=conv_lstm,y_tesp=6, mae=15.2478293909
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+INFO:root:model=conv_lstm,window = 24, y_tesp=7, mae=16.3354852886, rms=22.2514038233
+INFO:root:model=conv_lstm,window = 24, y_tesp=6, mae=14.7799279349, rms=20.8571567013
+INFO:root:model=conv_lstm,window = 24, y_tesp=5, mae=13.1699162943, rms=18.7781086607
+INFO:root:model=conv_lstm,window = 24, y_tesp=4, mae=11.7569818651, rms=16.5168351003
+INFO:root:model=conv_lstm,window = 24, y_tesp=3, mae=9.51413838286, rms=13.595479326
+INFO:root:model=conv_lstm,window = 24, y_tesp=2, mae=7.2620966728, rms=10.8357841547
+INFO:root:model=conv_lstm,window = 24, y_tesp=1, mae=4.8617256204, rms=7.68360055914
+INFO:root:model=conv_lstm,window = 24, y_tesp=0, mae=2.61288823926, rms=4.58830182988
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+INFO:root:model=conv_lstm,window = 12, y_tesp=7, mae=4.23719024658, rms=5.98708533411
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+INFO:root:model=conv_lstm,window = 12, y_tesp=7, mae=34.722748877, rms=42.7473654675
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+INFO:root:model=conv_lstm,window = 12, y_tesp=7, mae=34.3733925439, rms=42.9773293246
+INFO:root:model=conv_lstm,window = 12, y_tesp=6, mae=34.1563922142, rms=43.1881632806
+INFO:root:model=conv_lstm,window = 12, y_tesp=5, mae=34.1513345487, rms=43.311934249
+INFO:root:model=conv_lstm,window = 12, y_tesp=4, mae=35.1934825762, rms=43.1953814661
+INFO:root:model=conv_lstm,window = 12, y_tesp=3, mae=33.9935388221, rms=43.1028302969
+INFO:root:model=conv_lstm,window = 12, y_tesp=2, mae=34.9033054452, rms=44.3010107844
+INFO:root:model=conv_lstm,window = 12, y_tesp=1, mae=35.354736345, rms=43.3184236718
+INFO:root:model=conv_lstm,window = 12, y_tesp=0, mae=34.6838549082, rms=42.8484719386
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'version'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+DEBUG:git.cmd:Popen(['git', 'cat-file', '--batch-check'], cwd=/home/jupyter/work/bgprophet, universal_newlines=False, shell=None)
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+INFO:root:model=v_lstm,window = 12, y_tesp=6, mae=16.5879083578, rms=21.676182562
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+INFO:root:model=v_lstm,window = 12, y_tesp=6, mae=17.0086777484, rms=23.3792269477
+INFO:root:model=b_lstm,window = 12, y_tesp=6, mae=16.1470265936, rms=21.4930623398
+INFO:root:model=cnn_lstm,window = 12, y_tesp=6, mae=16.4389272036, rms=21.7582645908

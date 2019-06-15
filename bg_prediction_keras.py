@@ -178,7 +178,7 @@ def cnn(train_x, train_y, window, y_step,  n_features):
     model.compile(optimizer='adam', loss='mse')
 
     model.fit(train_x, train_y, batch_size=128,
-              epochs=150)
+              epochs=100)
     model.save('models/bg_predict_cnn_alpha.h5')
     print('Model saved')
 
@@ -190,7 +190,7 @@ def vanilla_lstm(train_x, train_y, window, y_step, n_features):
     model.add(LSTM(50, activation='relu', input_shape=(window, n_features)))
     model.add(Dense(y_step))
     model.compile(optimizer='adam', loss='mse')
-    model.fit(train_x, train_y, batch_size=128, epochs=200)
+    model.fit(train_x, train_y, batch_size=128, epochs=100)
     model.save('models/bg_predict_v_lstm.h5')
     print('Model saved')
     return model
@@ -201,7 +201,7 @@ def bi_lstm(train_x, train_y, window, y_step, n_features):
     model.add(Bidirectional(LSTM(50, activation='relu'), input_shape=(window, n_features)))
     model.add(Dense(y_step))
     model.compile(optimizer='adam', loss='mse')
-    model.fit(train_x, train_y, batch_size=128, epochs=200)
+    model.fit(train_x, train_y, batch_size=128, epochs=100)
     model.save('models/bg_predict_b_lstm.h5')
     print('Model saved')
     return model
@@ -213,7 +213,7 @@ def stacked_lstm(train_x, train_y, window, y_step, n_features):
     model.add(LSTM(50, activation='relu'))
     model.add(Dense(y_step))
     model.compile(optimizer='adam', loss='mse')
-    model.fit(train_x, train_y, batch_size=128, epochs=200)
+    model.fit(train_x, train_y, batch_size=128, epochs=100)
     model.save('models/bg_predict_s_lstm.h5')
     print('Model saved')
     return model
@@ -319,51 +319,51 @@ def clarke_error_grid(ref_values, pred_values, y_period):
                 min(ref_values), min(pred_values)))
 
     # Clear plot
-    plt.clf()
+#     plt.clf()
 
-    # Set up plot
-    plt.scatter(ref_values, pred_values, marker='o', color='black', s=8)
-    plt.title(y_period + " minutes Clarke Error Grid")
-    plt.xlabel("Reference Concentration (mg/dl)")
-    plt.ylabel("Prediction Concentration (mg/dl)")
-    plt.xticks([0, 50, 100, 150, 200, 250, 300, 350, 400])
-    plt.yticks([0, 50, 100, 150, 200, 250, 300, 350, 400])
-    plt.gca().set_facecolor('white')
+#     # Set up plot
+#     plt.scatter(ref_values, pred_values, marker='o', color='black', s=8)
+#     plt.title(y_period + " minutes Clarke Error Grid")
+#     plt.xlabel("Reference Concentration (mg/dl)")
+#     plt.ylabel("Prediction Concentration (mg/dl)")
+#     plt.xticks([0, 50, 100, 150, 200, 250, 300, 350, 400])
+#     plt.yticks([0, 50, 100, 150, 200, 250, 300, 350, 400])
+#     plt.gca().set_facecolor('white')
 
-    # Set axes lengths
-    plt.gca().set_xlim([0, 400])
-    plt.gca().set_ylim([0, 400])
-    plt.gca().set_aspect((400) / (400))
+#     # Set axes lengths
+#     plt.gca().set_xlim([0, 400])
+#     plt.gca().set_ylim([0, 400])
+#     plt.gca().set_aspect((400) / (400))
 
-    # Plot zone lines
-    plt.plot([0, 400], [0, 400], ':', c='black')  # Theoretical 45 regression line
-    plt.plot([0, 175 / 3], [70, 70], '-', c='black')
-    # plt.plot([175/3, 320], [70, 400], '-', c='black')
-    plt.plot([175 / 3, 400 / 1.2], [70, 400], '-',
-             c='black')  # Replace 320 with 400/1.2 because 100*(400 - 400/1.2)/(400/1.2) =  20% error
-    plt.plot([70, 70], [84, 400], '-', c='black')
-    plt.plot([0, 70], [180, 180], '-', c='black')
-    plt.plot([70, 290], [180, 400], '-', c='black')
-    # plt.plot([70, 70], [0, 175/3], '-', c='black')
-    plt.plot([70, 70], [0, 56], '-', c='black')  # Replace 175.3 with 56 because 100*abs(56-70)/70) = 20% error
-    # plt.plot([70, 400],[175/3, 320],'-', c='black')
-    plt.plot([70, 400], [56, 320], '-', c='black')
-    plt.plot([180, 180], [0, 70], '-', c='black')
-    plt.plot([180, 400], [70, 70], '-', c='black')
-    plt.plot([240, 240], [70, 180], '-', c='black')
-    plt.plot([240, 400], [180, 180], '-', c='black')
-    plt.plot([130, 180], [0, 70], '-', c='black')
+#     # Plot zone lines
+#     plt.plot([0, 400], [0, 400], ':', c='black')  # Theoretical 45 regression line
+#     plt.plot([0, 175 / 3], [70, 70], '-', c='black')
+#     # plt.plot([175/3, 320], [70, 400], '-', c='black')
+#     plt.plot([175 / 3, 400 / 1.2], [70, 400], '-',
+#              c='black')  # Replace 320 with 400/1.2 because 100*(400 - 400/1.2)/(400/1.2) =  20% error
+#     plt.plot([70, 70], [84, 400], '-', c='black')
+#     plt.plot([0, 70], [180, 180], '-', c='black')
+#     plt.plot([70, 290], [180, 400], '-', c='black')
+#     # plt.plot([70, 70], [0, 175/3], '-', c='black')
+#     plt.plot([70, 70], [0, 56], '-', c='black')  # Replace 175.3 with 56 because 100*abs(56-70)/70) = 20% error
+#     # plt.plot([70, 400],[175/3, 320],'-', c='black')
+#     plt.plot([70, 400], [56, 320], '-', c='black')
+#     plt.plot([180, 180], [0, 70], '-', c='black')
+#     plt.plot([180, 400], [70, 70], '-', c='black')
+#     plt.plot([240, 240], [70, 180], '-', c='black')
+#     plt.plot([240, 400], [180, 180], '-', c='black')
+#     plt.plot([130, 180], [0, 70], '-', c='black')
 
-    # Add zone titles
-    plt.text(30, 15, "A", fontsize=15)
-    plt.text(370, 260, "B", fontsize=15)
-    plt.text(280, 370, "B", fontsize=15)
-    plt.text(160, 370, "C", fontsize=15)
-    plt.text(160, 15, "C", fontsize=15)
-    plt.text(30, 140, "D", fontsize=15)
-    plt.text(370, 120, "D", fontsize=15)
-    plt.text(30, 370, "E", fontsize=15)
-    plt.text(370, 15, "E", fontsize=15)
+#     # Add zone titles
+#     plt.text(30, 15, "A", fontsize=15)
+#     plt.text(370, 260, "B", fontsize=15)
+#     plt.text(280, 370, "B", fontsize=15)
+#     plt.text(160, 370, "C", fontsize=15)
+#     plt.text(160, 15, "C", fontsize=15)
+#     plt.text(30, 140, "D", fontsize=15)
+#     plt.text(370, 120, "D", fontsize=15)
+#     plt.text(30, 370, "E", fontsize=15)
+#     plt.text(370, 15, "E", fontsize=15)
 
     # Statistics from the data
     zone = [0] * 5
@@ -451,7 +451,7 @@ def run(model_name, window, y_step):
         pred_y_last = [s[-1] for s in pred_y]
 
         plt, zone = clarke_error_grid(test_y_last, pred_y_last, '30 minutes CEG')
-        plt.show()
+#         plt.show()
         ylen = float(len(test_y_last))
         print("zones number:", zone)
         logging.info('model={0}, window = {1}, y_step={2}, rms={3}'.format(model_name, window, y_step, rms))
