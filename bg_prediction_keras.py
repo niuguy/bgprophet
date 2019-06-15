@@ -168,13 +168,13 @@ def temp():
     print(results[:10])
 
 
-def cnn(train_x, train_y, window, n_features):
+def cnn(train_x, train_y, window, y_step,  n_features):
     model = Sequential()
     model.add(Conv1D(filters=64, kernel_size=2, activation='relu', input_shape=(window, n_features)))
     model.add(MaxPooling1D(pool_size=2))
     model.add(Flatten())
     model.add(Dense(50, activation='relu'))
-    model.add(Dense(1))
+    model.add(Dense(y_step))
     model.compile(optimizer='adam', loss='mse')
 
     model.fit(train_x, train_y, batch_size=128,
@@ -185,10 +185,10 @@ def cnn(train_x, train_y, window, n_features):
     return model
 
 
-def vanilla_lstm(train_x, train_y, window, n_features):
+def vanilla_lstm(train_x, train_y, window, y_step, n_features):
     model = Sequential()
     model.add(LSTM(50, activation='relu', input_shape=(window, n_features)))
-    model.add(Dense(1))
+    model.add(Dense(y_step))
     model.compile(optimizer='adam', loss='mse')
     model.fit(train_x, train_y, batch_size=128, epochs=200)
     model.save('models/bg_predict_v_lstm.h5')
@@ -196,10 +196,10 @@ def vanilla_lstm(train_x, train_y, window, n_features):
     return model
 
 
-def bi_lstm(train_x, train_y, window, n_features):
+def bi_lstm(train_x, train_y, window, y_step, n_features):
     model = Sequential()
     model.add(Bidirectional(LSTM(50, activation='relu'), input_shape=(window, n_features)))
-    model.add(Dense(1))
+    model.add(Dense(y_step))
     model.compile(optimizer='adam', loss='mse')
     model.fit(train_x, train_y, batch_size=128, epochs=200)
     model.save('models/bg_predict_b_lstm.h5')
@@ -207,11 +207,11 @@ def bi_lstm(train_x, train_y, window, n_features):
     return model
 
 
-def stacked_lstm(train_x, train_y, window, n_features):
+def stacked_lstm(train_x, train_y, window, y_step, n_features):
     model = Sequential()
     model.add(LSTM(50, activation='relu', return_sequences=True, input_shape=(window, n_features)))
     model.add(LSTM(50, activation='relu'))
-    model.add(Dense(1))
+    model.add(Dense(y_step))
     model.compile(optimizer='adam', loss='mse')
     model.fit(train_x, train_y, batch_size=128, epochs=200)
     model.save('models/bg_predict_s_lstm.h5')
@@ -219,14 +219,14 @@ def stacked_lstm(train_x, train_y, window, n_features):
     return model
 
 
-def cnn_lstm(train_x, train_y, window, n_seq, n_features):
+def cnn_lstm(train_x, train_y, window, n_seq, y_step, n_features):
     model = Sequential()
     model.add(TimeDistributed(Conv1D(filters=64, kernel_size=1, activation='relu'),
                               input_shape=(None, int(window / n_seq), n_features)))
     model.add(TimeDistributed(MaxPooling1D(pool_size=2)))
     model.add(TimeDistributed(Flatten()))
     model.add(LSTM(50, activation='relu'))
-    model.add(Dense(1))
+    model.add(Dense(y_step))
     model.compile(optimizer='adam', loss='mse')
     model.fit(train_x, train_y, batch_size=128, epochs=100)
 
@@ -303,7 +303,7 @@ def flattern_result(actual, predicted):
 
 
 
-def clarke_error_grid(ref_values, pred_values, title_string):
+def clarke_error_grid(ref_values, pred_values, y_period):
     # Checking to see if the lengths of the reference and prediction arrays are the same
     assert (len(ref_values) == len(pred_values)), "Unequal number of values (reference : {}) (prediction : {}).".format(
         len(ref_values), len(pred_values))
@@ -323,7 +323,7 @@ def clarke_error_grid(ref_values, pred_values, title_string):
 
     # Set up plot
     plt.scatter(ref_values, pred_values, marker='o', color='black', s=8)
-    plt.title(title_string + " Clarke Error Grid")
+    plt.title(y_period + " minutes Clarke Error Grid")
     plt.xlabel("Reference Concentration (mg/dl)")
     plt.ylabel("Prediction Concentration (mg/dl)")
     plt.xticks([0, 50, 100, 150, 200, 250, 300, 350, 400])
@@ -394,7 +394,7 @@ def run(model_name, window, y_step):
 
         n_features = 1
         n_seq = 2
-        entries_df = pickle.load(open('data/entries_4966807.pkl', 'rb'))
+        entries_df = pickle.load(open('data/entries_20396154_2.pkl', 'rb'))
         bg_list = entries_df['sgv']
 
         # test_date = '2018-12-01'
@@ -404,8 +404,8 @@ def run(model_name, window, y_step):
         # print('len(test_bg_list)', len(test_bg_list))
         lenf = len(entries_df)
         split_point = lenf*2/3
-        train_bg_list = entries_df[:split_point]
-        test_bg_list = entries_df[split_point:]
+        train_bg_list = entries_df[:split_point]['sgv']
+        test_bg_list = entries_df[split_point:]['sgv']
         train_x, train_y = prepare_input(train_bg_list, window, y_step)
         test_x, test_y = prepare_input(test_bg_list, window, y_step)
 
@@ -419,15 +419,15 @@ def run(model_name, window, y_step):
             train_x = train_x.reshape((train_x.shape[0], train_x.shape[1], n_features))
 
         if model_name == 'cnn':
-            model = cnn(train_x, train_y, window, n_features)
+            model = cnn(train_x, train_y, window, y_step, n_features)
         if model_name == 'v_lstm':
-            model = vanilla_lstm(train_x, train_y, window, n_features)
+            model = vanilla_lstm(train_x, train_y, window, y_step, n_features)
         if model_name == 'b_lstm':
-            model = bi_lstm(train_x, train_y, window, n_features)
+            model = bi_lstm(train_x, train_y, window, y_step, n_features)
         if model_name == 's_lstm':
-            model = stacked_lstm(train_x, train_y, window, n_features)
+            model = stacked_lstm(train_x, train_y, window, y_step, n_features)
         if model_name == 'cnn_lstm':
-            model = cnn_lstm(train_x, train_y, window, n_seq, n_features)
+            model = cnn_lstm(train_x, train_y, window, n_seq, y_step, n_features)
         if model_name == 'conv_lstm':
             model = conv_lstm(train_x, train_y, window, n_seq, y_step, n_features)
 
@@ -454,8 +454,8 @@ def run(model_name, window, y_step):
         plt.show()
         ylen = float(len(test_y_last))
         print("zones number:", zone)
-        logging.info('model={0},window = {1}, y_step={2}, rms={3}'.format(model_name, window, y_step, rms))
-        logging.info('zoneA = {0}, zoneB ={1}, zoneC={2}, zoneD={3}, zongE={4}'.format(float(zone[0])/ylen, float(zone[1])/ylen, float(zone[2])/ylen, float(zone[3])/ylen, float(zone[4])/ylen))
+        logging.info('model={0}, window = {1}, y_step={2}, rms={3}'.format(model_name, window, y_step, rms))
+        logging.info('model={0}, zoneA = {1}, zoneB ={2}, zoneC={3}, zoneD={4}, zongE={5}'.format(model_name, float(zone[0])/ylen, float(zone[1])/ylen, float(zone[2])/ylen, float(zone[3])/ylen, float(zone[4])/ylen))
 
         # pred_results = pd.DataFrame(data={'y_true':test_y, 'y_pred':next_bgs})
         # pickle.dump(pred_results, open('results/predict_'+model_name+'_'+str(window)+'_'+str(y_step)+'.pkl', 'wb'), -1)
@@ -465,21 +465,17 @@ def run(model_name, window, y_step):
 
 
 if __name__ == "__main__":
-    # parser = argparse.ArgumentParser()
-    # parser.add_argument("--m", help="Choose from cnn,v_lstm, b_lstm, s_lstm, cnn_lstm, conv_lstm", action='store',
-    #                     default="v_lstm", type=str)
-    # parser.add_argument("--s", help="prediction steps", action='store', default="0", type=int)
-    # parser.add_argument("--w", help="window size", action='store', default="12", type=int)
-    #
-    # args = parser.parse_args()
-    # target_step = args.s
-    # window = args.w
-    # for y_step in range(6, -1, -3):
-    #     for m in ["conv_lstm"]:
-    #         run(m, window, y_step)
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--m", help="Choose from cnn,v_lstm, b_lstm, s_lstm, cnn_lstm, conv_lstm", action = 'store', default="v_lstm", type = str)
+    parser.add_argument("--s", help="prediction steps", action = 'store', default="0", type = int)
+    parser.add_argument("--w", help="window size", action = 'store', default="12", type = int)
 
-    preprocess_file('data/entries_4966807.json')
+    args = parser.parse_args()
+    target_step = args.s
+    window = args.w
+    for y_step in range(12, 5, -3):
+        for m in [ "cnn", "v_lstm", "b_lstm","s_lstm", "cnn_lstm", "conv_lstm"]:
+            run(m, window, y_step)
 
 
 
-#  "cnn","v_lstm", "b_lstm", "s_lstm", "cnn_lstm"
