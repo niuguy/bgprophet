@@ -394,7 +394,7 @@ def run(model_name, window, y_step):
 
         n_features = 1
         n_seq = 2
-        entries_df = pickle.load(open('data/entries_20396154_2.pkl', 'rb'))
+        entries_df = pickle.load(open('data/entries_99908129.pkl', 'rb'))
         bg_list = entries_df['sgv']
 
         # test_date = '2018-12-01'

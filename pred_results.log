@@ -47,3 +47,15 @@ INFO:root:model=cnn, window = 12, y_step=6, rms=14.7425015461
 INFO:root:model=cnn, zoneA = 0.79375231739, zoneB =0.194568038561, zoneC=0.0, zoneD=0.0116796440489, zongE=0.0
 INFO:root:model=v_lstm, window = 12, y_step=6, rms=12.3349007653
 INFO:root:model=v_lstm, zoneA = 0.883110863923, zoneB =0.10956618465, zoneC=0.0, zoneD=0.00732295142751, zongE=0.0
+WARNING:tensorflow:From /home/ben/Tools/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /home/ben/Tools/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+INFO:root:model=cnn, window = 12, y_step=12, rms=23.619479869
+INFO:root:model=cnn, zoneA = 0.68681288925, zoneB =0.26932033577, zoneC=0.0018413214189, zoneD=0.0413755754129, zongE=0.000649878147847
+INFO:root:model=v_lstm, window = 12, y_step=12, rms=21.5740932843
+INFO:root:model=v_lstm, zoneA = 0.659084754942, zoneB =0.299485513133, zoneC=0.00189547793122, zoneD=0.0390468453832, zongE=0.000487408610885
+INFO:root:model=b_lstm, window = 12, y_step=12, rms=21.4775987168
+INFO:root:model=b_lstm, zoneA = 0.707663146493, zoneB =0.250040617384, zoneC=0.00129975629569, zoneD=0.0406715407528, zongE=0.000324939073924
