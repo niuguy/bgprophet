@@ -242,10 +242,8 @@ def conv_lstm(train_x, train_y, window, n_seq, y_step, n_features):
     model1.add(Dense(y_step))
     model1.compile(optimizer='adam', loss='mse')
     model1.fit(train_x, train_y, batch_size=128, epochs=100)
-    #
-    #
-    #
-    #
+    model1.save('models/conv_lstm_128_'+str(n_seq)+'_'+str(y_step)+'.kerasmodel')
+
     # model2 = Sequential()                            # input_shape  = (batch, step, input_dim)
     # model2.add(Lambda(lambda x: K.mean(x, axis=2)))  # output_shape = (batch, step)
     # model2.add(Activation('softmax'))                # output_shape = (batch, step)model.fit(train_x, train_y,batch_size=64,epochs=10)
@@ -394,7 +392,7 @@ def run(model_name, window, y_step):
 
         n_features = 1
         n_seq = 2
-        entries_df = pickle.load(open('data/entries_99908129.pkl', 'rb'))
+        entries_df = pickle.load(open('data/entries_20396154_2.pkl', 'rb'))
         bg_list = entries_df['sgv']
 
         # test_date = '2018-12-01'
@@ -473,9 +471,10 @@ if __name__ == "__main__":
     args = parser.parse_args()
     target_step = args.s
     window = args.w
-    for y_step in range(12, 5, -3):
-        for m in [ "cnn", "v_lstm", "b_lstm","s_lstm", "cnn_lstm", "conv_lstm"]:
-            run(m, window, y_step)
+    run("conv_lstm",window, 6)
+#     for y_step in range(12, 5, -3):
+#         for m in [ "cnn", "v_lstm", "b_lstm","s_lstm", "cnn_lstm", "conv_lstm"]:
+#             run(m, window, y_step)
 
 
 

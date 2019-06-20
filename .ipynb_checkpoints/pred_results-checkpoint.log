@@ -1,0 +1,69 @@
+WARNING:tensorflow:From /home/ben/Tools/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /home/ben/Tools/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /home/ben/Tools/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+INFO:root:model=cnn, window = 12, y_step=12, rms=21.0397686357
+INFO:root:model=cnn, zoneA = 0.636338341681, zoneB =0.349749582638, zoneC=0.0, zoneD=0.0138193285105, zongE=9.27471712113e-05
+INFO:root:model=v_lstm, window = 12, y_step=12, rms=19.0120325099
+INFO:root:model=v_lstm, zoneA = 0.659154145799, zoneB =0.327675755889, zoneC=0.0, zoneD=0.013170098312, zongE=0.0
+INFO:root:model=b_lstm, window = 12, y_step=12, rms=19.2426414285
+INFO:root:model=b_lstm, zoneA = 0.633184937859, zoneB =0.354665182712, zoneC=0.0, zoneD=0.0120571322575, zongE=9.27471712113e-05
+INFO:root:model=s_lstm, window = 12, y_step=12, rms=19.0196220418
+INFO:root:model=s_lstm, zoneA = 0.683639398998, zoneB =0.302355778149, zoneC=0.0, zoneD=0.0140048228529, zongE=0.0
+INFO:root:model=cnn_lstm, window = 12, y_step=12, rms=19.8028374896
+INFO:root:model=cnn_lstm, zoneA = 0.665275459098, zoneB =0.320534223706, zoneC=0.0, zoneD=0.0140975700241, zongE=9.27471712113e-05
+INFO:root:model=conv_lstm, window = 12, y_step=12, rms=19.6022658072
+INFO:root:model=conv_lstm, zoneA = 0.623168243369, zoneB =0.364125394175, zoneC=0.0, zoneD=0.0127063624559, zongE=0.0
+INFO:root:model=cnn, window = 12, y_step=9, rms=18.076108983
+INFO:root:model=cnn, zoneA = 0.748446917014, zoneB =0.239406583217, zoneC=0.0, zoneD=0.0121464997682, zongE=0.0
+INFO:root:model=v_lstm, window = 12, y_step=9, rms=15.661509109
+INFO:root:model=v_lstm, zoneA = 0.763653222068, zoneB =0.224200278164, zoneC=0.0, zoneD=0.0121464997682, zongE=0.0
+INFO:root:model=b_lstm, window = 12, y_step=9, rms=15.8141806065
+INFO:root:model=b_lstm, zoneA = 0.770607324988, zoneB =0.217431617988, zoneC=0.0, zoneD=0.0119610570236, zongE=0.0
+INFO:root:model=s_lstm, window = 12, y_step=9, rms=16.0161774644
+INFO:root:model=s_lstm, zoneA = 0.733426054706, zoneB =0.254520166898, zoneC=0.0, zoneD=0.0120537783959, zongE=0.0
+INFO:root:model=cnn_lstm, window = 12, y_step=9, rms=16.716094847
+INFO:root:model=cnn_lstm, zoneA = 0.731108020399, zoneB =0.25702364395, zoneC=0.0, zoneD=0.0118683356514, zongE=0.0
+INFO:root:model=conv_lstm, window = 12, y_step=9, rms=15.8153282704
+INFO:root:model=conv_lstm, zoneA = 0.779323133982, zoneB =0.208530366249, zoneC=0.0, zoneD=0.0121464997682, zongE=0.0
+INFO:root:model=cnn, window = 12, y_step=6, rms=14.7425015461
+INFO:root:model=cnn, zoneA = 0.79375231739, zoneB =0.194568038561, zoneC=0.0, zoneD=0.0116796440489, zongE=0.0
+INFO:root:model=v_lstm, window = 12, y_step=6, rms=12.3349007653
+INFO:root:model=v_lstm, zoneA = 0.883110863923, zoneB =0.10956618465, zoneC=0.0, zoneD=0.00732295142751, zongE=0.0
+WARNING:tensorflow:From /home/ben/Tools/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /home/ben/Tools/anaconda3/envs/py27/lib/python2.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+INFO:root:model=cnn, window = 12, y_step=12, rms=23.619479869
+INFO:root:model=cnn, zoneA = 0.68681288925, zoneB =0.26932033577, zoneC=0.0018413214189, zoneD=0.0413755754129, zongE=0.000649878147847
+INFO:root:model=v_lstm, window = 12, y_step=12, rms=21.5740932843
+INFO:root:model=v_lstm, zoneA = 0.659084754942, zoneB =0.299485513133, zoneC=0.00189547793122, zoneD=0.0390468453832, zongE=0.000487408610885
+INFO:root:model=b_lstm, window = 12, y_step=12, rms=21.4775987168
+INFO:root:model=b_lstm, zoneA = 0.707663146493, zoneB =0.250040617384, zoneC=0.00129975629569, zoneD=0.0406715407528, zongE=0.000324939073924
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+INFO:root:model=cnn, window = 24, y_step=12, rms=21.0983900252
+INFO:root:model=cnn, zoneA = 0.6260909935, zoneB =0.361095636026, zoneC=0.0, zoneD=0.0128133704735, zongE=0.0

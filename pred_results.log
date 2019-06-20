@@ -59,3 +59,21 @@ INFO:root:model=v_lstm, window = 12, y_step=12, rms=21.5740932843
 INFO:root:model=v_lstm, zoneA = 0.659084754942, zoneB =0.299485513133, zoneC=0.00189547793122, zoneD=0.0390468453832, zongE=0.000487408610885
 INFO:root:model=b_lstm, window = 12, y_step=12, rms=21.4775987168
 INFO:root:model=b_lstm, zoneA = 0.707663146493, zoneB =0.250040617384, zoneC=0.00129975629569, zoneD=0.0406715407528, zongE=0.000324939073924
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+INFO:root:model=cnn, window = 24, y_step=12, rms=21.0983900252
+INFO:root:model=cnn, zoneA = 0.6260909935, zoneB =0.361095636026, zoneC=0.0, zoneD=0.0128133704735, zongE=0.0
+INFO:root:model=v_lstm, window = 24, y_step=12, rms=20.3405077746
+INFO:root:model=v_lstm, zoneA = 0.662395543175, zoneB =0.324512534819, zoneC=0.0, zoneD=0.0130919220056, zongE=0.0
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+INFO:root:model=conv_lstm, window = 12, y_step=6, rms=12.3453806339
+INFO:root:model=conv_lstm, zoneA = 0.863274008157, zoneB =0.125324434557, zoneC=0.0, zoneD=0.0114015572859, zongE=0.0
