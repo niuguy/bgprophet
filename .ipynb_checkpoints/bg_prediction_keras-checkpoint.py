@@ -213,8 +213,11 @@ def stacked_lstm(train_x, train_y, window, y_step, n_features):
     model.add(LSTM(50, activation='relu'))
     model.add(Dense(y_step))
     model.compile(optimizer='adam', loss='mse')
-    model.fit(train_x, train_y, batch_size=128, epochs=100)
+    model.fit(train_x, train_y, batch_size=32, epochs=100)
     model.save('models/bg_predict_s_lstm.h5')
+    model.save('models/s_lstm_32_'+str(window)+'_'+str(y_step)+'.kerasmodel')
+
+    
     print('Model saved')
     return model
 
@@ -471,7 +474,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     target_step = args.s
     window = args.w
-    run("conv_lstm",window, 6)
+    run("s_lstm",window, 6)
 #     for y_step in range(12, 5, -3):
 #         for m in [ "cnn", "v_lstm", "b_lstm","s_lstm", "cnn_lstm", "conv_lstm"]:
 #             run(m, window, y_step)
