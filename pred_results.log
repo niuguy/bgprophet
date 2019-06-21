@@ -97,3 +97,9 @@ Instructions for updating:
 Use tf.cast instead.
 INFO:root:model=s_lstm, window = 12, y_step=6, rms=12.2346926833
 INFO:root:model=s_lstm, zoneA = 0.866054875788, zoneB =0.123655913978, zoneC=0.0, zoneD=0.0102892102336, zongE=0.0
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
