@@ -1,2 +1,5 @@
 /.idea
 /data
+/.vscode
+/.ipynb_checkpoints
+/mlruns
